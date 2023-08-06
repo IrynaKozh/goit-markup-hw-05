@@ -490,6 +490,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: var(--white-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-input::placeholder {
   color: var(--white-color);
@@ -517,6 +518,8 @@ button {
 .footer-svg {
   fill: var(--white-color);
   margin-left: 16px;
+}
+.footer-label {
 }
 /* Portfolio */
 .button-list {
@@ -756,19 +759,22 @@ button {
 .form-label {
   color: var(--icon-color);
   font-size: 12px;
-
+  display: block;
+  margin-bottom: 4px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .form-input {
-  border-color: transparent;
+  background-color: transparent;
   width: 100%;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--accent-color, rgba(46, 47, 66, 0.4));
+  border: 1px solid rgba(46, 47, 66, 0.4);
   font-size: 12px;
   color: var(--accent-color, rgba(46, 47, 66, 0.4));
   padding-left: 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: transparent;
 }
 .form-input:focus {
   border-color: var(--logo-color);
@@ -781,7 +787,7 @@ button {
 }
 .modal-svg {
   fill: var(--accent-color);
-
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   position: absolute;
   left: 16px;
   top: 50%;
@@ -816,11 +822,11 @@ button {
   border-color: var(--logo-color);
 }
 .modal-check {
-  visually: hidden;
 }
 .modal-check:checked .span-check {
   background-color: var(--hover-color);
   fill: var(--footer-color);
+  border: none;
 }
 .span-check {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -828,10 +834,12 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-block;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
+  width: 16px;
+  height: 16px;
 }
 .modal-check-text {
   color: var(--icon-color);

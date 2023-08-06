@@ -441,7 +441,7 @@
         <div class="footer-div-form">
           <p class="footer-text-form">Subscribe</p>
           <form class="footer-form">
-            <label aria-label="footer email input">
+            <label class="footer-label" aria-label="footer email input">
               <input
                 class="footer-input"
                 type="email"
@@ -472,15 +472,15 @@
 
         <form class="modal-form" name="feedback-form" autocomplete="off">
           <div class="modal-field">
-            <label class="form-label" for="username">Name</label>
+            <label class="form-label" for="user-name">Name</label>
             <div class="input-wrap">
               <input
                 class="form-input"
                 type="text"
-                name="username"
-                id="username"
+                name="user-name"
+                id="user-name"
               />
-              <svg class="modal-svg" width="18" height="18">
+              <svg class="modal-svg" width="18" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </div>
@@ -518,6 +518,7 @@
 
           <div class="modal-field-checkbox">
             <input
+              visually="hidden"
               class="modal-check"
               type="checkbox"
               name="user-privacy"
