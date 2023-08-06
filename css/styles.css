@@ -695,6 +695,10 @@ button {
   transform: translateX(-50%) translateY(-50%);
   min-height: 584px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 72px;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
 }
 .modal-btn {
   position: absolute;
@@ -741,12 +745,7 @@ button {
   width: 360px;
   min-height: 336px;
 }
-.modal-form:focus {
-  border-color: var(--logo-color);
-}
-.modal-form:focus + .modal-svg {
-  fill: var(--logo-color);
-}
+
 .form-label {
   color: var(--icon-color);
   font-size: 12px;
@@ -763,6 +762,12 @@ button {
   font-size: 12px;
   color: var(--accent-color, rgba(46, 47, 66, 0.4));
   padding-left: 38px;
+}
+.form-input:focus {
+  border-color: var(--logo-color);
+}
+.form-input:focus + .modal-svg {
+  fill: var(--logo-color);
 }
 .input-wrap {
   position: relative;
