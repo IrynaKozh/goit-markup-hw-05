@@ -473,31 +473,36 @@ button {
   margin-bottom: 16px;
 }
 .wrapper {
-  display: flex;
-  gap: 24px;
 }
 .footer-form {
+  display: flex;
+  gap: 24px;
 }
 .footer-input {
   width: 264px;
   height: 40px;
-  padding: 8px 16px;
+  padding-left: 16px;
   border-radius: 4px;
   border: 1px solid var(--white-color);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white-color);
 }
 .footer-input::placeholder {
+  color: var(--white-color);
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
 }
 .footer-button {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
-  width: 165px;
+  min-width: 165px;
   height: 40px;
   padding: 8px 24px;
   color: var(--white-color);
@@ -507,9 +512,11 @@ button {
   background-color: var(--logo-color);
   border-radius: 4px;
   border: none;
+  cursor: pointer;
 }
 .footer-svg {
   fill: var(--white-color);
+  margin-left: 16px;
 }
 /* Portfolio */
 .button-list {
@@ -783,18 +790,48 @@ button {
 .modal-field {
   margin-bottom: 8px;
 }
+.modal-field-comment {
+  margin-bottom: 16px;
+}
+.modal-field-checkbox {
+  margin-bottom: 24px;
+}
 .modal-comment {
   border-color: transparent;
   width: 100%;
   height: 120px;
   border-radius: 4px;
-  border: 1px solid var(--accent-color, rgba(46, 47, 66, 0.4));
+  background-color: transparent;
   font-size: 12px;
-  color: var(--accent-color, rgba(46, 47, 66, 0.4));
+  border: 1px solid rgba(46, 47, 66, 0.4);
   padding: 8px 16px;
   resize: none;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-comment:focus {
+  border-color: var(--logo-color);
 }
 .modal-check {
+  visually: hidden;
+}
+.modal-check:checked .span-check {
+  background-color: var(--hover-color);
+  fill: var(--footer-color);
+}
+.span-check {
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 .modal-check-text {
   color: var(--icon-color);
@@ -816,7 +853,7 @@ button {
   stroke: var(--hover-color);
 }
 .button-form {
-  width: 169px;
+  min-width: 169px;
   height: 56px;
   color: var(--white-color);
   text-align: center;
@@ -830,4 +867,5 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   display: block;
   margin: 0 auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
