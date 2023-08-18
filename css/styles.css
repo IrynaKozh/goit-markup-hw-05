@@ -53,6 +53,11 @@ img {
 }
 button {
   cursor: pointer;
+  font-family: inherit;
+  color: currentColor;
+}
+input {
+  font-family: inherit;
 }
 .container {
   width: 1158px;
@@ -83,7 +88,6 @@ button {
 
   color: var(--logo-color);
   margin-right: 76px;
-  padding: 24px 0;
 }
 .accent {
   color: var(--accent-color);
@@ -119,6 +123,7 @@ button {
   margin-top: 20px;
 }
 .header-link {
+  display: block;
   text-decoration: none;
   color: var(--accent-color);
   letter-spacing: 0.02em;
@@ -170,7 +175,7 @@ button {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/images/main-pages/office.jpg);
+    url(../images/main-pages/office.jpg);
   max-width: 1440px;
   background-position: center;
   background-size: cover;
@@ -225,7 +230,6 @@ button {
   border-radius: 0px 0px 4px 4px;
 }
 .page-item-icon {
-  margin-bottom: 8px;
 }
 .div-icon {
   display: flex;
@@ -247,7 +251,6 @@ button {
 
   color: var(--accent-color);
   margin-bottom: 8px;
-  text-align: center;
 }
 .page-text {
   font-style: normal;
@@ -283,6 +286,17 @@ button {
 .img {
 }
 /* Section4 */
+.page-subtitle-four {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
 .section-four {
   background-color: var(--footer-color);
   padding: 120px 0;
@@ -330,8 +344,6 @@ button {
 
 .team-icon {
   fill: var(--footer-color);
-  height: 24px;
-  width: 24px;
 }
 
 .page-text-four {
@@ -339,7 +351,7 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-
+  margin-bottom: 8px;
   letter-spacing: 0.02em;
 
   color: var(--primary-color);
@@ -418,7 +430,6 @@ button {
   letter-spacing: 0.02em;
   color: var(--white);
   max-width: 264px;
-  margin-top: 17.5px;
 }
 .footer-text-social {
   font-weight: 500;
@@ -429,7 +440,7 @@ button {
 }
 .footer-flex {
   display: flex;
-  gap: 120px;
+  margin-right: 80px;
   align-items: baseline;
 }
 .gap {
@@ -473,37 +484,30 @@ button {
   margin-bottom: 16px;
 }
 .wrapper {
-}
-.footer-form {
   display: flex;
   gap: 24px;
+}
+.footer-form {
 }
 .footer-input {
   width: 264px;
   height: 40px;
-  padding-left: 16px;
+  padding: 8px 16px;
   border-radius: 4px;
   border: 1px solid var(--white-color);
-
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   background-color: transparent;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: var(--white-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
 .footer-input::placeholder {
-  color: var(--white-color);
   font-size: 12px;
   line-height: 2;
   letter-spacing: 0.04em;
 }
 .footer-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  min-width: 165px;
+  width: 165px;
   height: 40px;
   padding: 8px 24px;
   color: var(--white-color);
@@ -513,13 +517,9 @@ button {
   background-color: var(--logo-color);
   border-radius: 4px;
   border: none;
-  cursor: pointer;
 }
 .footer-svg {
   fill: var(--white-color);
-  margin-left: 16px;
-}
-.footer-label {
 }
 /* Portfolio */
 .button-list {
@@ -527,7 +527,6 @@ button {
   gap: 24px;
   margin-bottom: 72px;
   justify-content: center;
-  margin-top: 108px;
 }
 .button-item {
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -755,39 +754,35 @@ button {
   width: 360px;
   min-height: 336px;
 }
-
+.modal-form:focus {
+  border-color: var(--logo-color);
+}
+.modal-form:focus + .modal-svg {
+  fill: var(--logo-color);
+}
 .form-label {
   color: var(--icon-color);
   font-size: 12px;
-  display: block;
-  margin-bottom: 4px;
+
   line-height: 1.17;
   letter-spacing: 0.04em;
 }
 .form-input {
-  background-color: transparent;
+  border-color: transparent;
   width: 100%;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid var(--accent-color, rgba(46, 47, 66, 0.4));
   font-size: 12px;
   color: var(--accent-color, rgba(46, 47, 66, 0.4));
   padding-left: 38px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: transparent;
-}
-.form-input:focus {
-  border-color: var(--logo-color);
-}
-.form-input:focus + .modal-svg {
-  fill: var(--logo-color);
 }
 .input-wrap {
   position: relative;
 }
 .modal-svg {
   fill: var(--accent-color);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   position: absolute;
   left: 16px;
   top: 50%;
@@ -796,50 +791,18 @@ button {
 .modal-field {
   margin-bottom: 8px;
 }
-.modal-field-comment {
-  margin-bottom: 16px;
-}
-.modal-field-checkbox {
-  margin-bottom: 24px;
-}
 .modal-comment {
   border-color: transparent;
   width: 100%;
   height: 120px;
   border-radius: 4px;
-  background-color: transparent;
+  border: 1px solid var(--accent-color, rgba(46, 47, 66, 0.4));
   font-size: 12px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  color: var(--accent-color, rgba(46, 47, 66, 0.4));
   padding: 8px 16px;
   resize: none;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-  color: rgba(46, 47, 66, 0.4);
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.modal-comment:focus {
-  border-color: var(--logo-color);
 }
 .modal-check {
-}
-.modal-check:checked + .form-label span {
-  background-color: var(--hover-color);
-  fill: var(--footer-color);
-  border: none;
-}
-.span-check {
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
-  width: 16px;
-  height: 16px;
 }
 .modal-check-text {
   color: var(--icon-color);
@@ -861,7 +824,7 @@ button {
   stroke: var(--hover-color);
 }
 .button-form {
-  min-width: 169px;
+  width: 169px;
   height: 56px;
   color: var(--white-color);
   text-align: center;
@@ -875,5 +838,4 @@ button {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   display: block;
   margin: 0 auto;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
