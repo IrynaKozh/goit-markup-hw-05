@@ -803,6 +803,9 @@ input {
   transform: translateY(-50%);
 }
 .modal-field {
+  margin-bottom: 8px;
+}
+.modal-field-comment {
   margin-bottom: 16px;
 }
 .modal-field-checkbox {
