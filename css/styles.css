@@ -263,6 +263,7 @@ input {
   color: var(--primary-color);
 }
 /* Section3 */
+
 .subtitle {
   font-style: normal;
   font-weight: 700;
@@ -276,17 +277,7 @@ input {
   color: var(--accent-color);
   margin-bottom: 72px;
 }
-.img-list {
-  display: flex;
-  gap: 24px;
-}
-.img-item {
-  width: calc((100% - 48px) / 3);
-}
-.img {
-}
-/* Section4 */
-.page-subtitle-four {
+.page-subtitle-three {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
@@ -297,7 +288,7 @@ input {
   color: var(--accent-color);
   margin-bottom: 8px;
 }
-.section-four {
+.section-three {
   background-color: var(--footer-color);
   padding: 120px 0;
 }
@@ -314,7 +305,7 @@ input {
 }
 .team-img {
 }
-.section-four-item {
+.section-three-item {
   width: 40px;
   height: 40px;
 }
@@ -338,7 +329,7 @@ input {
 .team-item-icon:focus {
   background-color: var(--hover-color);
 }
-.section-four-div {
+.section-three-div {
   padding: 32px 0;
 }
 
@@ -346,7 +337,7 @@ input {
   fill: var(--footer-color);
 }
 
-.page-text-four {
+.page-text-three {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
